@@ -48,10 +48,10 @@ function App() {
           {/* <ClientFeedback /> */}
           {/* <EarningsSummary /> */}
           <Heading as="h1" fontSize={["2xl", "4xl"]} mb={2} color="black">
-            Alex Smith
+          God'swill Sekav Apya
           </Heading>
           <Text fontSize={["lg", "xl"]} mb={4} color="black">
-            Welcome back, Alex! Here's an overview of your portfolio.
+            Welcome back, Sekav! Here's an overview of your portfolio.
           </Text>
 
           <Flex gap="4" direction={["column", "row"]} align="center">
@@ -138,7 +138,7 @@ function App() {
           </Text>
 
           <Flex gap="4" direction={["column", "row"]} align="center">
-            <Card.Root maxW="300px" overflow="hidden">
+            <Card.Root w="300px" overflow="hidden">
               <Image
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 alt="Green double couch with wooden legs"
@@ -163,7 +163,7 @@ function App() {
                 <Button variant="solid">Tailwind CSS</Button>
               </Card.Footer>
             </Card.Root>
-            <Card.Root maxW="300px" overflow="hidden">
+            <Card.Root w="300px" overflow="hidden">
               <Image
                 src="https://images.unsplash.com/photo-1668600372358-e61485420d2f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Medical Personnel operating a tablet"
@@ -188,7 +188,7 @@ function App() {
                 <Button variant="solid">Chakra UI</Button>
               </Card.Footer>
             </Card.Root>
-            <Card.Root maxW="300px" overflow="hidden">
+            <Card.Root w="300px" overflow="hidden">
               <Image
                 src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3J5cHRvY3VycmVuY3l8ZW58MHx8MHx8fDA%3D"
                 alt="Crypto Trading Platform"
@@ -293,7 +293,64 @@ function App() {
             </Card.Root>
           </Flex>
 
-         
+          {/* <Heading
+            as="h1"
+            fontSize={["2xl", "4xl"]}
+            mb={6}
+            color="black"
+            mt={8}
+          >
+            Feel Free to Reach Out
+          </Heading>
+          <Box
+            bg="black"
+            p={6}
+            rounded="md"
+            shadow="md"
+            w="full"
+            maxW="lg"
+            mx="auto"
+          >
+            <VStack spacing={4}>
+              <form action="">
+              <FormControl id="name" isRequired>
+                <FormLabel>Your Name</FormLabel>
+                <Input placeholder="John Doe" />
+              </FormControl>
+
+              <FormControl id="email" isRequired>
+                <FormLabel>Email Address</FormLabel>
+                <Input type="email" placeholder="you@example.com" />
+              </FormControl>
+
+              <FormControl id="message" isRequired>
+                <FormLabel>Message</FormLabel>
+                <Textarea placeholder="Write your message here..." rows={4} />
+              </FormControl>
+
+              <Button colorScheme="blue" w="full">
+                Send Message
+              </Button>
+              </form>
+            </VStack>
+          </Box> */}
+
+          <Box
+            as="footer"
+            py={4}
+            px={6}
+            // bg="gray.100"
+            borderTop="1px solid"
+            borderColor="gray.200"
+            mt={8}
+            mb={-8}
+          >
+            <Flex justify="center" align="center">
+              <Text fontSize="sm" color="gray.950">
+                © {new Date().getFullYear()} God'swill Sekav Apya.
+              </Text>
+            </Flex>
+          </Box>
         </Box>
       </Box>
     </Flex>
