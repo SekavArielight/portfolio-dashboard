@@ -1,4 +1,21 @@
-import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  VStack,
+  Button,
+  Card,
+  Image,
+  Avatar,
+  HStack,
+  Stack,
+  Strong,
+  // FormControl,
+  // FormLabel,
+  // Input,
+  // Textarea,
+} from "@chakra-ui/react";
 import React from "react";
 import Sidebar from "./components/Sidebar";
 // import ProfileOverview from './components/ProfileOverview'
@@ -9,7 +26,7 @@ function App() {
       {/* Sidebar - only visible on md and up */}
       <Box
         as="aside"
-        bg="red.500"
+        bg="black"
         display={{ base: "none", md: "block" }}
         w="60"
         h="100vh"
@@ -30,54 +47,253 @@ function App() {
           {/* <RecentProjects /> */}
           {/* <ClientFeedback /> */}
           {/* <EarningsSummary /> */}
-          <Heading as="h1" fontSize={["2xl", "4xl"]} mb={4} color="black">
+          <Heading as="h1" fontSize={["2xl", "4xl"]} mb={2} color="black">
             Alex Smith
           </Heading>
           <Text fontSize={["lg", "xl"]} mb={4} color="black">
             Welcome back, Alex! Here's an overview of your portfolio.
           </Text>
+
           <Flex gap="4" direction={["column", "row"]} align="center">
-            <Box h="100px" w="300px" border="1px solid black" p={4} borderRadius="md">
+            <Box
+              h="100px"
+              w="300px"
+              border="1px solid black"
+              p={4}
+              borderRadius="md"
+            >
               <VStack>
                 <Text fontSize="xl" fontWeight="bold" color="black">
-                $82,950
+                  $82,950
                 </Text>
                 <Text fontSize="sm" color="gray.600">
-                Total Earnings
+                  Total Earnings
                 </Text>
               </VStack>
             </Box>
-            <Box h="100px" w="300px" border="1px solid black" p={4} borderRadius="md">
-            <VStack>
+            <Box
+              h="100px"
+              w="300px"
+              border="1px solid black"
+              p={4}
+              borderRadius="md"
+            >
+              <VStack>
                 <Text fontSize="xl" fontWeight="bold" color="black">
-                24
+                  24
                 </Text>
                 <Text fontSize="sm" color="gray.600">
-                Projects Completed
+                  Projects Completed
                 </Text>
               </VStack>
             </Box>
-            <Box h="100px" w="300px" border="1px solid black" p={4} borderRadius="md">
-            <VStack>
+            <Box
+              h="100px"
+              w="300px"
+              border="1px solid black"
+              p={4}
+              borderRadius="md"
+            >
+              <VStack>
                 <Text fontSize="xl" fontWeight="bold" color="black">
-                4.9/5
+                  4.9/5
                 </Text>
                 <Text fontSize="sm" color="gray.600">
-                Client Satisfaction
+                  Client Satisfaction
                 </Text>
               </VStack>
             </Box>
-            <Box h="100px" w="300px" border="1px solid black" p={4} borderRadius="md">
-            <VStack>
+            <Box
+              h="100px"
+              w="300px"
+              border="1px solid black"
+              p={4}
+              borderRadius="md"
+            >
+              <VStack>
                 <Text fontSize="xl" fontWeight="bold" color="black">
-                18
+                  18
                 </Text>
                 <Text fontSize="sm" color="gray.600">
-                Active Clients
+                  Active Clients
                 </Text>
               </VStack>
             </Box>
           </Flex>
+
+          <Heading
+            as="h1"
+            fontSize={["2xl", "4xl"]}
+            mb={2}
+            color="black"
+            mt={8}
+          >
+            Recent Projects
+          </Heading>
+          <Text fontSize={["lg", "xl"]} mb={4} color="black">
+            A peek behind the curtain—these handpicked projects are where
+            passion met purpose. From bold designs to clever code and compelling
+            words, each piece tells a story of creativity, collaboration, and
+            craft. Dive in and explore the wonder made real.
+          </Text>
+
+          <Flex gap="4" direction={["column", "row"]} align="center">
+            <Card.Root maxW="300px" overflow="hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                alt="Green double couch with wooden legs"
+              />
+              <Card.Body gap="2">
+                <Card.Title>Furniture Website</Card.Title>
+                <Card.Description>
+                  A clean, responsive e-commerce site designed to showcase
+                  handcrafted furniture with style and simplicity.
+                </Card.Description>
+                {/* <Text
+                  textStyle="2xl"
+                  fontWeight="medium"
+                  letterSpacing="tight"
+                  mt="2"
+                >
+                  $450
+                </Text> */}
+              </Card.Body>
+              <Card.Footer gap="2">
+                <Button variant="solid">React</Button>
+                <Button variant="solid">Tailwind CSS</Button>
+              </Card.Footer>
+            </Card.Root>
+            <Card.Root maxW="300px" overflow="hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1668600372358-e61485420d2f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Medical Personnel operating a tablet"
+              />
+              <Card.Body gap="2">
+                <Card.Title>Health Management System</Card.Title>
+                <Card.Description>
+                  A streamlined platform for managing patient records,
+                  appointments, and billing — built for efficiency and care.
+                </Card.Description>
+                {/* <Text
+                  textStyle="2xl"
+                  fontWeight="medium"
+                  letterSpacing="tight"
+                  mt="2"
+                >
+                  $450
+                </Text> */}
+              </Card.Body>
+              <Card.Footer gap="2">
+                <Button variant="solid">Next.js</Button>
+                <Button variant="solid">Chakra UI</Button>
+              </Card.Footer>
+            </Card.Root>
+            <Card.Root maxW="300px" overflow="hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3J5cHRvY3VycmVuY3l8ZW58MHx8MHx8fDA%3D"
+                alt="Crypto Trading Platform"
+              />
+              <Card.Body gap="2">
+                <Card.Title>Crypto Trading Platform</Card.Title>
+                <Card.Description>
+                  A secure and user-friendly platform for trading
+                  cryptocurrencies, featuring real-time data and analytics.
+                </Card.Description>
+                {/* <Text
+                  textStyle="2xl"
+                  fontWeight="medium"
+                  letterSpacing="tight"
+                  mt="2"
+                >
+                  $450
+                </Text> */}
+              </Card.Body>
+              <Card.Footer gap="2">
+                <Button variant="solid">Next.js</Button>
+                <Button variant="solid">Material UI</Button>
+              </Card.Footer>
+            </Card.Root>
+          </Flex>
+
+          <Heading
+            as="h1"
+            fontSize={["2xl", "4xl"]}
+            mb={6}
+            color="black"
+            mt={8}
+          >
+            Client Feedback
+          </Heading>
+          <Flex gap="4" direction={["column", "row"]} align="center">
+            <Card.Root width="300px">
+              <Card.Body>
+                <HStack mb="6" gap="3">
+                  <Avatar.Root>
+                    <Avatar.Image src="https://images.unsplash.com/photo-1511806754518-53bada35f930" />
+                    <Avatar.Fallback name="Nate Foss" />
+                  </Avatar.Root>
+                  <Stack gap="0">
+                    <Text fontWeight="semibold" textStyle="sm">
+                      Nate Foss
+                    </Text>
+                    <Text color="fg.muted" textStyle="sm">
+                      @natefoss
+                    </Text>
+                  </Stack>
+                </HStack>
+                <Card.Description>
+                  “Professional, detail-oriented, and easy to work with. The
+                  project turned out better than we imagined.”
+                </Card.Description>
+              </Card.Body>
+            </Card.Root>
+            <Card.Root width="300px">
+              <Card.Body>
+                <HStack mb="6" gap="3">
+                  <Avatar.Root>
+                    <Avatar.Image src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZlbWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D" />
+                    <Avatar.Fallback name="Aisha Ali" />
+                  </Avatar.Root>
+                  <Stack gap="0">
+                    <Text fontWeight="semibold" textStyle="sm">
+                      Aisha Ali
+                    </Text>
+                    <Text color="fg.muted" textStyle="sm">
+                      @aisha_ali
+                    </Text>
+                  </Stack>
+                </HStack>
+                <Card.Description>
+                  “Super responsive and talented! Our website finally reflects
+                  the heart of our brand.”
+                </Card.Description>
+              </Card.Body>
+            </Card.Root>
+            <Card.Root width="300px">
+              <Card.Body>
+                <HStack mb="6" gap="3">
+                  <Avatar.Root>
+                    <Avatar.Image src="https://images.unsplash.com/photo-1595085610896-fb31cfd5d4b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmVtYWxlJTIwcHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" />
+                    <Avatar.Fallback name="Sarah Miller" />
+                  </Avatar.Root>
+                  <Stack gap="0">
+                    <Text fontWeight="semibold" textStyle="sm">
+                      Sarah Miller
+                    </Text>
+                    <Text color="fg.muted" textStyle="sm">
+                      @sara_miller
+                    </Text>
+                  </Stack>
+                </HStack>
+                <Card.Description>
+                  “Absolutely impressed with the quality and speed. Delivered
+                  exactly what we needed — and more!”
+                </Card.Description>
+              </Card.Body>
+            </Card.Root>
+          </Flex>
+
+         
         </Box>
       </Box>
     </Flex>

@@ -19,9 +19,9 @@ const Sidebar = () => {
           Dashboard
         </Text>
         <Text>Overview</Text>
-        <Text>Users</Text>
-        <Text>Reports</Text>
-        <Text>Settings</Text>
+        <Text>Projects</Text>
+        <Text>Client Reviews</Text>
+        <Text>Contact</Text>
       </VStack>
     </Box>
   );
